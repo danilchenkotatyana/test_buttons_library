@@ -1,0 +1,130 @@
+.button {
+	font-family: "HelveticaNeue-Light", "HelveticaNeue", Helvetica, Arial, sans-serif;
+	text-align: center;
+	border: 1px solid transparent;
+	padding: 0 .8em;
+	margin: 0;
+	border-radius: 3px;
+	color: $text-white-color;
+	font-size: 1em;
+	text-decoration: none;
+	min-width: 100px;
+	display: table;
+	cursor: pointer;
+	width: auto;
+	height: 36px;
+	line-height: 36px;
+	&:hover, &:active, &:focus {
+		outline: none;
+		transition: .5s;
+		box-shadow: 0 0 5px 0 $color-grey;
+	}
+
+//colored buttons mixin
+	@mixin bg-button ($color) {
+		background-color:$color;
+		border-color:$color;
+	}
+	@mixin bg-inverted-button ($color) {
+		color:$color;
+		border-color:$color;
+	}
+//colors
+	&__blue,{
+		@include bg-button ($color-blue);
+
+		&-inverted {
+			@include bg-inverted-button($color-blue);
+			background-color: $color-white;
+
+		}
+	}
+
+	&__green {
+		@include bg-button ($color-green);
+
+		&-inverted {
+			@include bg-inverted-button($color-green);
+			background-color: $color-white;
+		}
+	}
+
+	&__grey {
+		@include bg-button($color-grey);
+		color: $text-grey-color;
+		background: rgba(255,255,255,1);/* Old Browsers */
+		background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);/* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );/* IE6-9 */
+
+		&-inverted {
+			@include bg-inverted-button($color-grey);
+			color: $text-grey-color;
+			background-color: $color-white;
+		}
+	}
+
+	&__orange {
+		@include bg-button ($color-orange);
+
+		&-inverted {
+			@include bg-inverted-button($color-orange);
+			background-color: $color-white;
+		}
+	}
+
+	&__red {
+		@include bg-button ($color-red);
+
+		&-inverted {
+			@include bg-inverted-button($color-red);
+			background-color: $color-white;
+		}
+	}
+
+	//button sizes
+	&__l-size {
+		height: 40px;
+		min-width: 150px;
+		line-height: 40px;
+		font-size: 1.1em;
+	}
+	&__s-size {
+		height: 32px;
+		line-height: 32px;
+		min-width: 80px;
+		font-size: .9em;
+	}
+	&__xs-size {
+		height: 22px;
+		line-height: 22px;
+		min-width: 72px;
+		font-size: .8em;
+	}
+//states and modifications
+	&.is-disabled,
+	&[disabled]{
+		opacity: .5;
+		cursor: auto;
+		box-shadow: none;
+		&__no-changed {
+			opacity: 1;
+			cursor: auto;
+			box-shadow: none;
+		}
+	}
+	&[class$="-inverted"] {
+		background-color: $color-white;
+
+	}
+	&.button__no-width {
+		min-width: auto;
+	}
+	&__no-paddings {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&__full-width {
+		width: 100%;
+	}
+
+}

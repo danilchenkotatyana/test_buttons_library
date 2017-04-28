@@ -1,0 +1,63 @@
+$text-color: #666;
+$text-white-color: #fff; //for colored buttons text
+$text-grey-color: #4d4d4d;
+$text-light-grey-color: #333;
+
+$color-blue: #13a4e9;
+$color-green: #70b837;
+$color-orange: #e59800;
+$color-red: #f15a00;
+$color-white: #fff;
+$color-grey: #ccc; //for buttons borders
+
+html {
+	font-size: 100%;
+	color: $text-color;
+	font-family: "HelveticaNeue-Light", "HelveticaNeue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	background-color: #f5f5f5;
+	padding: 3px 10px;
+}
+body {
+	background-color: #efeded;
+	padding: 1px;
+}
+header {
+	padding: 3vh 6vh;
+	text-decoration: underline;
+}
+.content {
+	padding: 3vh 6vh;
+	background-color: $color-white;
+	margin: 0 auto;
+	max-width: 1024px;
+	//min-width: 700px;
+}
+h1 {
+	color: $text-light-grey-color;
+	font-size: 1.1rem;
+	padding-bottom: 1em;
+}
+.b-columns {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 1em;
+	&__col {
+		flex-grow: 1;
+
+	}
+}
+.b-line {
+	display: flex;
+	flex-wrap: wrap;
+}
+.b-columns,
+.b-line {
+	.button {
+		margin-bottom: .5em;
+	}
+}
+.l-supported-text {
+	padding-left: 1em;
+	padding-top: .7em;
+}

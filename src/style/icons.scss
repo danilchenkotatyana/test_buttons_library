@@ -1,0 +1,25 @@
+.icon {
+	background-color: $color-white;
+	width: 1.3em;
+	height: 1.3em;
+	border-radius: 1em;
+	color: $color-blue;
+	display: inline-block;
+	line-height: 1.5em;
+	transform: translateY(-50%);
+	top: .4em;
+	position: relative;
+	font-style: normal;
+	font-size: .8em;
+	vertical-align: middle;
+	font-weight: bold;
+	text-align: center;
+	font-family: arial;
+	&__left {
+		margin-right: .6em;
+	}
+	&__right {
+		margin-left: .6em;
+	}
+
+}
