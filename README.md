@@ -5,8 +5,11 @@ see link:
 For install:
 
 $ npm install
+
 $ npm install gulp
+
 $ npm init
+
 $ npm install gulp gulp-watch  gulp-autoprefixer gulp-uglify gulp-sass gulp-sourcemaps gulp-rigger gulp-clean-css gulp-imagemin imagemin-pngquant rimraf browser-sync --save-dev
 
 # Class names in html for buttons:
