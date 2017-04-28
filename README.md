@@ -1,6 +1,7 @@
 # test buttons library
 
-see link:
+follow link:
+https://danilchenkotatyana.github.io/test_buttons_library/build/
 
 For install:
 
